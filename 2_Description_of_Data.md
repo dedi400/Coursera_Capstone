@@ -8,6 +8,6 @@ For this project I'm going to use the following sources:
 
 2. **Geocoding** London neighbourhoods with *Google Maps API*. (The other cities are already geocoded in previous sessions) I'm using Google Maps as I realized that OpenStreetMap gives incorrect results if I put only postal codes as search keywords.
 
-3. *Foursquare.com* searches for **facilities and venues** within the neighbourhoods. I may use additional *Google Places* searches for special facilities (e.g. playgrounds, nurseries) if the original search is not satisfactory. The disadvantage of Google Places search is that it provides only 20 results with one request so I will not fully replace Foursquare.
+3. *Foursquare.com* searches for **facilities and venues** within the neighbourhoods. The tipical venues include restaurants, shops, bakeries, etc. I may use additional *Google Places* searches for special facilities (e.g. playgrounds, nurseries) if the original search is not satisfactory. The disadvantage of Google Places search is that it provides only 20 results with one request so I will not fully replace Foursquare. Though I found Google more precise with non-profit (or governmental) facilities (e.g. clinics, libraries, playgrounds etc.)
 
 With the list of the nearby facilities for each neighbourhoods I'm going to calculate a similarity index among Budapest neighbourhoods and other cities. 
