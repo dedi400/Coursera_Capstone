@@ -1,0 +1,5 @@
+# Neighbourhood recommendation for movers
+## 1. Introduction and Description of Business Problem
+This is the Capstone project of IBM Data Sicence Professional Certificate. It was required to prepare a data science project that using geological data and *foursquare.com* information. As I live in Budapest (capital of Hungary) I wanted to include this city to the porject. So I came up with the following idea: let's assume that someone in Budapest gets an opportunity to work in London, New York or Toronto. I want to recommend her/him similar neighbourhoods to move with the family.
+
+Just as in previous weeks I'm going to calculate "similarity" by looking for similar facilities/venues in the neighbourhood. I want to focus on facilities that are important to families with children, so I'm going to give some facilities/venues (nurseries, schools, playgrounds, parks, medical centers) higher weight in this project. The final target is to prepare DataFrame that lists 5 most similar neighbourhoods in London/New York/Toronto for each neighbourhood in Budapest.
