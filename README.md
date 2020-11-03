@@ -1,4 +1,4 @@
-# Coursera_Capstone
+# Coursera Capstone project
 This is my capstone project for [IBM Data Science Professional Certificate](https://www.coursera.org/professional-certificates/ibm-data-science).
 
 You can find the following files in this folder:
