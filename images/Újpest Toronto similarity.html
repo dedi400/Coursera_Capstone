@@ -1,0 +1,1380 @@
+<!DOCTYPE html>
+<head>    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.6.0/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css"/>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://rawcdn.githack.com/python-visualization/folium/master/folium/templates/leaflet.awesome.rotate.css"/>
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_39d807912f854786938e1bf9d5dd04b7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+            </style>
+        
+</head>
+<body>    
+    <h3 align="center" style="font-size:16px"><b>Újpest neighbourhood similarity index</b></h3>
+    
+            <div class="folium-map" id="map_39d807912f854786938e1bf9d5dd04b7" ></div>
+        
+</body>
+<script>    
+    
+            var map_39d807912f854786938e1bf9d5dd04b7 = L.map(
+                "map_39d807912f854786938e1bf9d5dd04b7",
+                {
+                    center: [43.7, -79.38],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 11,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_661eb75f2e624732bdab9775c627fe18 = L.tileLayer(
+                "https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "Data by \u0026copy; \u003ca href=\"http://openstreetmap.org\"\u003eOpenStreetMap\u003c/a\u003e, under \u003ca href=\"http://www.openstreetmap.org/copyright\"\u003eODbL\u003c/a\u003e.", "detectRetina": false, "maxNativeZoom": 18, "maxZoom": 18, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            var circle_marker_fa59f7ec24cc4b46ba6a61d980405ffa = L.circleMarker(
+                [43.75612258911133, -79.32963562011719],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#4d00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_fa59f7ec24cc4b46ba6a61d980405ffa.bindTooltip(
+                `<div>
+                     Parkwoods, 64
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_39e06d6dcbf140b8ab313abf923598f0 = L.circleMarker(
+                [43.72677993774414, -79.31073760986328],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0009ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_39e06d6dcbf140b8ab313abf923598f0.bindTooltip(
+                `<div>
+                     Victoria Village, 58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7f057b97f0d54ab2afe6713de2adb77f = L.circleMarker(
+                [43.65535354614258, -79.36504364013672],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff44", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_7f057b97f0d54ab2afe6713de2adb77f.bindTooltip(
+                `<div>
+                     Regent Park, Harbourfront, 23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dfdf82f9c65e46c7a885cce2c447ba3b = L.circleMarker(
+                [43.72199630737305, -79.44591522216797],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffcc", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_dfdf82f9c65e46c7a885cce2c447ba3b.bindTooltip(
+                `<div>
+                     Lawrence Manor, Lawrence Heights, 34
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_28b1e06ba4d4484abb13af7c2bc0aba4 = L.circleMarker(
+                [43.663909912109375, -79.38873291015625],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff50", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_28b1e06ba4d4484abb13af7c2bc0aba4.bindTooltip(
+                `<div>
+                     Queen's Park, Ontario Provincial Government, 24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_558fe66e3f134be89a9f0596ea6072ea = L.circleMarker(
+                [43.66452026367188, -79.5290756225586],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2800ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_558fe66e3f134be89a9f0596ea6072ea.bindTooltip(
+                `<div>
+                     Islington Avenue, Humber Valley Village, 61
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_3dc5758fdaea4a999ecb503312080b9d = L.circleMarker(
+                [43.80707931518555, -79.20155334472656],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2800ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_3dc5758fdaea4a999ecb503312080b9d.bindTooltip(
+                `<div>
+                     Malvern, Rouge, 61
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_867a1c89d78d4d26be2e55da5f4da143 = L.circleMarker(
+                [43.74631118774414, -79.35760498046875],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0022ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_867a1c89d78d4d26be2e55da5f4da143.bindTooltip(
+                `<div>
+                     Don Mills, 56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e387b6e4eb0f47feb34b9f55edcec1cb = L.circleMarker(
+                [43.7066764831543, -79.30657958984375],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1b00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_e387b6e4eb0f47feb34b9f55edcec1cb.bindTooltip(
+                `<div>
+                     Parkview Hill, Woodbine Gardens, 61
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_05949e85d148432393eb2e77460727ac = L.circleMarker(
+                [43.65747833251953, -79.37863159179688],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffcc", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_05949e85d148432393eb2e77460727ac.bindTooltip(
+                `<div>
+                     Garden District, Ryerson, 34
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4deaa09e77044c7f9367011e949ca133 = L.circleMarker(
+                [43.70709991455078, -79.44788360595703],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0009ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_4deaa09e77044c7f9367011e949ca133.bindTooltip(
+                `<div>
+                     Glencairn, 58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e455e8dfc1644312a2c2b7c79c307a94 = L.circleMarker(
+                [43.65275955200195, -79.55233001708984],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_e455e8dfc1644312a2c2b7c79c307a94.bindTooltip(
+                `<div>
+                     West Deane Park, Princess Gardens, Martin Grove, Islington, Cloverdale, 60
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a8e1279610eb4f77a6ea3222da835416 = L.circleMarker(
+                [43.78721618652344, -79.15251922607422],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2800ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_a8e1279610eb4f77a6ea3222da835416.bindTooltip(
+                `<div>
+                     Rouge Hill, Port Union, Highland Creek, 61
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fe24121a5f30485ca0cf0a207c915573 = L.circleMarker(
+                [43.68973922729492, -79.31005096435547],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0022ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_fe24121a5f30485ca0cf0a207c915573.bindTooltip(
+                `<div>
+                     Woodbine Heights, 56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a3c239d795c14907b8e64c7117ea40d7 = L.circleMarker(
+                [43.6511116027832, -79.375732421875],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff81", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_a3c239d795c14907b8e64c7117ea40d7.bindTooltip(
+                `<div>
+                     St. James Town, 27
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a8e77a1fc09248b6936d093c525960b1 = L.circleMarker(
+                [43.69017028808594, -79.43126678466797],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0009ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_a8e77a1fc09248b6936d093c525960b1.bindTooltip(
+                `<div>
+                     Humewood-Cedarvale, 57
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8972bdc54dbf458aa391e2124fc6d802 = L.circleMarker(
+                [43.64368057250977, -79.57450103759766],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_8972bdc54dbf458aa391e2124fc6d802.bindTooltip(
+                `<div>
+                     Eringate, Bloordale Gardens, Old Burnhamthorpe, Markland Wood, 59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ffadde17a2a14befb99e3b07a44a34c9 = L.circleMarker(
+                [43.76762771606445, -79.18902587890625],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0015ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_ffadde17a2a14befb99e3b07a44a34c9.bindTooltip(
+                `<div>
+                     Guildwood, Morningside, West Hill, 57
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4e5d65a21a33483babe05f3b02e0f55e = L.circleMarker(
+                [43.67655944824219, -79.29415893554688],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00f4ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_4e5d65a21a33483babe05f3b02e0f55e.bindTooltip(
+                `<div>
+                     The Beaches, 39
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be3a0d188baa4feeb67f806b7f8de8ca = L.circleMarker(
+                [43.64701843261719, -79.37408447265625],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff06", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_be3a0d188baa4feeb67f806b7f8de8ca.bindTooltip(
+                `<div>
+                     Berczy Park, 18
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_7f13f2024abe4785b893a1f5a57631e4 = L.circleMarker(
+                [43.68841552734375, -79.44920349121094],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0022ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_7f13f2024abe4785b893a1f5a57631e4.bindTooltip(
+                `<div>
+                     Caledonia-Fairbanks, 56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_2dff937297db472bb50a23be5d88f090 = L.circleMarker(
+                [43.76904678344727, -79.21820068359375],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_2dff937297db472bb50a23be5d88f090.bindTooltip(
+                `<div>
+                     Woburn, 60
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_778fa583c9144403b44a08d5206e5987 = L.circleMarker(
+                [43.708229064941406, -79.36769104003906],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffa6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_778fa583c9144403b44a08d5206e5987.bindTooltip(
+                `<div>
+                     Leaside, 30
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_86bc73bfda304a62a078dd566dbdcdd0 = L.circleMarker(
+                [43.6567611694336, -79.38648986816406],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffbf", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_86bc73bfda304a62a078dd566dbdcdd0.bindTooltip(
+                `<div>
+                     Central Bay Street, 32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b97be54171b543a68dd64d97d9b5a1d7 = L.circleMarker(
+                [43.66771697998047, -79.42019653320312],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff44", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_b97be54171b543a68dd64d97d9b5a1d7.bindTooltip(
+                `<div>
+                     Christie, 23
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5af885637e984d3ba6866e0132a5b885 = L.circleMarker(
+                [43.76826477050781, -79.23798370361328],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#003aff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_5af885637e984d3ba6866e0132a5b885.bindTooltip(
+                `<div>
+                     Cedarbrae, 54
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a6645eb8a0594231bfffd0a345e34f32 = L.circleMarker(
+                [43.80209732055664, -79.35926818847656],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0015ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_a6645eb8a0594231bfffd0a345e34f32.bindTooltip(
+                `<div>
+                     Hillcrest Village, 57
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6d782b9e56724585962e80bb216efc8a = L.circleMarker(
+                [43.7509765625, -79.44723510742188],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#002eff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_6d782b9e56724585962e80bb216efc8a.bindTooltip(
+                `<div>
+                     Bathurst Manor, Wilson Heights, Downsview North, 55
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_17a4f822d9214c7590995d82f956881c = L.circleMarker(
+                [43.70378494262695, -79.34591674804688],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0009ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_17a4f822d9214c7590995d82f956881c.bindTooltip(
+                `<div>
+                     Thorncliffe Park, 57
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c396e3d178c84b2e817e7a2ff9f3e0fd = L.circleMarker(
+                [43.6496696472168, -79.38224792480469],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffa6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_c396e3d178c84b2e817e7a2ff9f3e0fd.bindTooltip(
+                `<div>
+                     Richmond, Adelaide, King, 31
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_102ab93333a049ab93efb1eaf0e9aa11 = L.circleMarker(
+                [43.66516494750977, -79.43780517578125],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff9a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_102ab93333a049ab93efb1eaf0e9aa11.bindTooltip(
+                `<div>
+                     Dufferin, Dovercourt Village, 30
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_06613d857d214f0ebb9449d6ccb21a44 = L.circleMarker(
+                [43.74473190307617, -79.23497009277344],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_06613d857d214f0ebb9449d6ccb21a44.bindTooltip(
+                `<div>
+                     Scarborough Village, 59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6af33af26e474161b2828377891076f5 = L.circleMarker(
+                [43.779945373535156, -79.34407043457031],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0091ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_6af33af26e474161b2828377891076f5.bindTooltip(
+                `<div>
+                     Fairview, Henry Farm, Oriole, 46
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b2a8a41bf1f849b08f41e5afc7f0be9f = L.circleMarker(
+                [43.7636947631836, -79.489501953125],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_b2a8a41bf1f849b08f41e5afc7f0be9f.bindTooltip(
+                `<div>
+                     Northwood Park, York University, 59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_760952c9bef840d9a867aa381117849e = L.circleMarker(
+                [43.68527221679688, -79.33726501464844],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00fff1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_760952c9bef840d9a867aa381117849e.bindTooltip(
+                `<div>
+                     East Toronto, Broadview North (Old East York), 36
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_edd6eb6068e748f1a896d808c91c1157 = L.circleMarker(
+                [43.64068603515625, -79.37662506103516],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff9a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_edd6eb6068e748f1a896d808c91c1157.bindTooltip(
+                `<div>
+                     Harbourfront East, Union Station, Toronto Islands, 29
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9f365f9d2d7f44369d9eb3c55d9f964e = L.circleMarker(
+                [43.647422790527344, -79.41803741455078],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff9a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_9f365f9d2d7f44369d9eb3c55d9f964e.bindTooltip(
+                `<div>
+                     Little Portugal, Trinity, 30
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f5c68d7110b642a5bd7d6d6ceef3499c = L.circleMarker(
+                [43.72914123535156, -79.2632064819336],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0022ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_f5c68d7110b642a5bd7d6d6ceef3499c.bindTooltip(
+                `<div>
+                     Kennedy Park, Ionview, East Birchmount Park, 56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e97d90538684459d96aaa3bb1381e685 = L.circleMarker(
+                [43.77389526367188, -79.37979888916016],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_e97d90538684459d96aaa3bb1381e685.bindTooltip(
+                `<div>
+                     Bayview Village, 58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6c25ca30a5024bffb88fc788f4c63956 = L.circleMarker(
+                [43.733360290527344, -79.47101593017578],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0022ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_6c25ca30a5024bffb88fc788f4c63956.bindTooltip(
+                `<div>
+                     Downsview, 56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c151aa3c230444e3a60ebe79202daa5f = L.circleMarker(
+                [43.67881774902344, -79.3512954711914],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff5c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_c151aa3c230444e3a60ebe79202daa5f.bindTooltip(
+                `<div>
+                     The Danforth West, Riverdale, 24
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fe91161e359f4be2a9aef40a5d5d4ead = L.circleMarker(
+                [43.64091491699219, -79.42957305908203],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffd8", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_fe91161e359f4be2a9aef40a5d5d4ead.bindTooltip(
+                `<div>
+                     Brockton, Parkdale Village, Exhibition Place, 34
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_41c0e247485c43f5a65a109273ec59db = L.circleMarker(
+                [43.70850372314453, -79.28335571289062],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0015ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_41c0e247485c43f5a65a109273ec59db.bindTooltip(
+                `<div>
+                     Golden Mile, Clairlea, Oakridge, 56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4fa18a5e80984f938f8b1b6e03a41e0a = L.circleMarker(
+                [43.7534065246582, -79.37953186035156],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0009ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_4fa18a5e80984f938f8b1b6e03a41e0a.bindTooltip(
+                `<div>
+                     York Mills, Silver Hills, 58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5f554c01a86f4c36b9072b40597ba411 = L.circleMarker(
+                [43.671199798583984, -79.31649017333984],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#009dff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_5f554c01a86f4c36b9072b40597ba411.bindTooltip(
+                `<div>
+                     India Bazaar, The Beaches West, 46
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e79dfce2771c47b0be11ce4346a96650 = L.circleMarker(
+                [43.71388244628906, -79.48784637451172],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_e79dfce2771c47b0be11ce4346a96650.bindTooltip(
+                `<div>
+                     North Park, Maple Leaf Park, Upwood Park, 59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a631e5953987432b82c95f225d25ffb8 = L.circleMarker(
+                [43.75866317749024, -79.56055450439453],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#2800ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_a631e5953987432b82c95f225d25ffb8.bindTooltip(
+                `<div>
+                     Humber Summit, 61
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_751ca3eaeef84d8685d5a9dca6851ec6 = L.circleMarker(
+                [43.72624969482422, -79.23149871826172],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_751ca3eaeef84d8685d5a9dca6851ec6.bindTooltip(
+                `<div>
+                     Cliffside, Cliffcrest, Scarborough Village West, 59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4f28fa3418ec43bda0b3f2239cf953dd = L.circleMarker(
+                [43.78986740112305, -79.41166687011719],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00e7ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_4f28fa3418ec43bda0b3f2239cf953dd.bindTooltip(
+                `<div>
+                     Willowdale, Newtonbrook, 39
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b77432fd9dd54896a7a51a91af0fd567 = L.circleMarker(
+                [43.66181564331055, -79.3421859741211],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff75", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_b77432fd9dd54896a7a51a91af0fd567.bindTooltip(
+                `<div>
+                     Studio District, 26
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_84ab2f5e9151426298282e998743227f = L.circleMarker(
+                [43.7318229675293, -79.4178695678711],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#003aff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_84ab2f5e9151426298282e998743227f.bindTooltip(
+                `<div>
+                     Bedford Park, Lawrence Manor East, 54
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_58f6997b401f426aae6f2dfbf1f5141d = L.circleMarker(
+                [43.69248962402344, -79.48229217529297],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_58f6997b401f426aae6f2dfbf1f5141d.bindTooltip(
+                `<div>
+                     Del Ray, Mount Dennis, Keelsdale and Silverthorn, 60
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_0423bcfd2a5847a1a32829a69e05dc51 = L.circleMarker(
+                [43.73497009277344, -79.53868103027344],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1b00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_0423bcfd2a5847a1a32829a69e05dc51.bindTooltip(
+                `<div>
+                     Humberlea, Emery, 61
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e4e205777833447b8d97c103db91e5db = L.circleMarker(
+                [43.696102142333984, -79.26473236083984],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_e4e205777833447b8d97c103db91e5db.bindTooltip(
+                `<div>
+                     Birch Cliff, Cliffside West, 60
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_5cd7f58dd8ce4953b9de3e96c1566ec1 = L.circleMarker(
+                [43.76837539672852, -79.4089584350586],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff37", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_5cd7f58dd8ce4953b9de3e96c1566ec1.bindTooltip(
+                `<div>
+                     Willowdale, Willowdale East, 22
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_986b98a3b477490e928b9cc081b1fe3f = L.circleMarker(
+                [43.72715759277344, -79.39704132080078],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#005fff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_986b98a3b477490e928b9cc081b1fe3f.bindTooltip(
+                `<div>
+                     Lawrence Park, 51
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4ea80f20382d41788960cac7ee85af45 = L.circleMarker(
+                [43.71055603027344, -79.41960144042969],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0015ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_4ea80f20382d41788960cac7ee85af45.bindTooltip(
+                `<div>
+                     Roselawn, 57
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b07d6b83840046eaa550367aa250f7f8 = L.circleMarker(
+                [43.67467880249024, -79.4805679321289],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#005fff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_b07d6b83840046eaa550367aa250f7f8.bindTooltip(
+                `<div>
+                     Runnymede, The Junction North, 51
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e80337ec13a749359e7969043fe8687d = L.circleMarker(
+                [43.70547103881836, -79.5177230834961],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_e80337ec13a749359e7969043fe8687d.bindTooltip(
+                `<div>
+                     Weston, 59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_d36d1f5471424d5aa724777312fd6d08 = L.circleMarker(
+                [43.76133728027344, -79.2716293334961],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_d36d1f5471424d5aa724777312fd6d08.bindTooltip(
+                `<div>
+                     Dorset Park, Wexford Heights, Scarborough Town Centre, 59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cd6b886ac62941f2840729fa2918d265 = L.circleMarker(
+                [43.74925231933594, -79.39966583251953],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0047ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_cd6b886ac62941f2840729fa2918d265.bindTooltip(
+                `<div>
+                     York Mills West, 52
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_657a5c164e4d44378e0eedc1ea5e66e4 = L.circleMarker(
+                [43.7103385925293, -79.39448547363281],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff9a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_657a5c164e4d44378e0eedc1ea5e66e4.bindTooltip(
+                `<div>
+                     Davisville North, 29
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ebc054640d5f4cf49275854aee2a6bf0 = L.circleMarker(
+                [43.69591522216797, -79.41254425048828],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0053ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_ebc054640d5f4cf49275854aee2a6bf0.bindTooltip(
+                `<div>
+                     Forest Hill North & West, Forest Hill Road Park, 51
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_352b5f425d1a4216abdb97f2aa64364c = L.circleMarker(
+                [43.661376953125, -79.46463775634766],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00fffd", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_352b5f425d1a4216abdb97f2aa64364c.bindTooltip(
+                `<div>
+                     High Park, The Junction South, 38
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ccd63b849c65463eb932ec7dd449ffeb = L.circleMarker(
+                [43.6922721862793, -79.53080749511719],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_ccd63b849c65463eb932ec7dd449ffeb.bindTooltip(
+                `<div>
+                     Westmount, 58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ca6c1bcf68f04adc810f0f212b7a88fa = L.circleMarker(
+                [43.749366760253906, -79.30249786376953],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0015ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_ca6c1bcf68f04adc810f0f212b7a88fa.bindTooltip(
+                `<div>
+                     Wexford, Maryvale, 56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_dac6cbefafde45f1be6fdc5855f04093 = L.circleMarker(
+                [43.778358459472656, -79.44325256347656],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_dac6cbefafde45f1be6fdc5855f04093.bindTooltip(
+                `<div>
+                     Willowdale, Willowdale West, 58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a23554f8c2024167bf74b91e45f44375 = L.circleMarker(
+                [43.71175765991211, -79.40384674072266],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffbf", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_a23554f8c2024167bf74b91e45f44375.bindTooltip(
+                `<div>
+                     North Toronto West, Lawrence Park, 32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4227ad2635984da6967327cb08d9a3ec = L.circleMarker(
+                [43.67317962646485, -79.40176391601562],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffbf", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_4227ad2635984da6967327cb08d9a3ec.bindTooltip(
+                `<div>
+                     The Annex, North Midtown, Yorkville, 33
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_b12bb1f47c20415f8077a219cc39e006 = L.circleMarker(
+                [43.64689254760742, -79.44915008544922],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00fff1", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_b12bb1f47c20415f8077a219cc39e006.bindTooltip(
+                `<div>
+                     Parkdale, Roncesvalles, 36
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_e9b1bea7cc914540bb6378926c934d52 = L.circleMarker(
+                [43.651893615722656, -79.3817138671875],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffe4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_e9b1bea7cc914540bb6378926c934d52.bindTooltip(
+                `<div>
+                     Canada Post Gateway Processing Centre, 36
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_4833bbd8cce34b80a57dd03396504bae = L.circleMarker(
+                [43.68695068359375, -79.55780029296875],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_4833bbd8cce34b80a57dd03396504bae.bindTooltip(
+                `<div>
+                     Kingsview Village, St. Phillips, Martin Grove Gardens, Richview Gardens, 58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_f8f2439518934a9e969b25ce829a8c18 = L.circleMarker(
+                [43.79356384277344, -79.26764678955078],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0084ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_f8f2439518934a9e969b25ce829a8c18.bindTooltip(
+                `<div>
+                     Agincourt, 47
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a28a85caf9b642a99beca03c5e056099 = L.circleMarker(
+                [43.703208923339844, -79.39047241210938],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff69", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_a28a85caf9b642a99beca03c5e056099.bindTooltip(
+                `<div>
+                     Davisville, 25
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ea7dd1689eff49229fe266f37f01a6e3 = L.circleMarker(
+                [43.6646728515625, -79.3971939086914],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffe4", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_ea7dd1689eff49229fe266f37f01a6e3.bindTooltip(
+                `<div>
+                     University of Toronto, Harbord, 35
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_ff12a194913b49fc958bff3dd54e6163 = L.circleMarker(
+                [43.65321350097656, -79.48197174072266],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffbf", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_ff12a194913b49fc958bff3dd54e6163.bindTooltip(
+                `<div>
+                     Runnymede, Swansea, 32
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_66278d893dd943fc8933fde76d7bb9bd = L.circleMarker(
+                [43.78248977661133, -79.30240631103516],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#002eff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_66278d893dd943fc8933fde76d7bb9bd.bindTooltip(
+                `<div>
+                     Clarks Corners, Tam O'Shanter, Sullivan, 55
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_21fc7de4eb564ea6b5244630ecee0cda = L.circleMarker(
+                [43.68778991699219, -79.38864135742188],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#005fff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_21fc7de4eb564ea6b5244630ecee0cda.bindTooltip(
+                `<div>
+                     Moore Park, Summerhill East, 51
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_52cd4fb5d4ab40c0a45eb0cf6a740a95 = L.circleMarker(
+                [43.65324783325195, -79.39706420898438],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00dbff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_52cd4fb5d4ab40c0a45eb0cf6a740a95.bindTooltip(
+                `<div>
+                     Kensington Market, Chinatown, Grange Park, 40
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_98ac1d26dfd846739027352ee7b3536f = L.circleMarker(
+                [43.81801223754883, -79.28150177001953],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#002eff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_98ac1d26dfd846739027352ee7b3536f.bindTooltip(
+                `<div>
+                     Milliken, Agincourt North, Steeles East, L'Amoreaux East, 54
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_aa69f59a79d24644a406ab65c1801106 = L.circleMarker(
+                [43.68640518188477, -79.40166473388672],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff9a", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_aa69f59a79d24644a406ab65c1801106.bindTooltip(
+                `<div>
+                     Summerhill West, Rathnelly, South Hill, Forest Hill SE, Deer Park, 29
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_6057f6b2e22249bcb958b384a0c8ad53 = L.circleMarker(
+                [43.64387130737305, -79.3958511352539],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff8e", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_6057f6b2e22249bcb958b384a0c8ad53.bindTooltip(
+                `<div>
+                     CN Tower, King and Spadina, Railway Lands, Harbourfront West, Bathurst Quay, South Niagara, Island airport, 29
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_be55ea6dfeb444d9b66de599d68c6b0e = L.circleMarker(
+                [43.60583114624024, -79.49910736083984],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#5900ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_be55ea6dfeb444d9b66de599d68c6b0e.bindTooltip(
+                `<div>
+                     New Toronto, Mimico South, Humber Bay Shores, 66
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_14e9c20936b245509cebb1d80b11caa3 = L.circleMarker(
+                [43.74400329589844, -79.58541107177734],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1b00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_14e9c20936b245509cebb1d80b11caa3.bindTooltip(
+                `<div>
+                     South Steeles, Silverstone, Humbergate, Jamestown, Mount Olive, Beaumond Heights, Thistletown, Albion Gardens, 60
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cd105e627b3a4ac2989b549e2729ab53 = L.circleMarker(
+                [43.80116271972656, -79.32173156738281],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0f00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_cd105e627b3a4ac2989b549e2729ab53.bindTooltip(
+                `<div>
+                     Steeles West, L'Amoreaux West, 59
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_8eeb71f6ba8241728492a61101d4e956 = L.circleMarker(
+                [43.67584991455078, -79.381103515625],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ffa6", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_8eeb71f6ba8241728492a61101d4e956.bindTooltip(
+                `<div>
+                     Rosedale, 31
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_9f821c712bb64be0a3d8025fe3b4809d = L.circleMarker(
+                [43.59930419921875, -79.53604888916016],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0015ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_9f821c712bb64be0a3d8025fe3b4809d.bindTooltip(
+                `<div>
+                     Alderwood, Long Branch, 57
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_c033c3ca54cc415bb1abc80a7dcd423c = L.circleMarker(
+                [43.71898651123047, -79.5845947265625],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0300ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_c033c3ca54cc415bb1abc80a7dcd423c.bindTooltip(
+                `<div>
+                     Northwest, West Humber - Clairville, 58
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_cd5aad73fba44a689ae7b948306f64ce = L.circleMarker(
+                [43.82689666748047, -79.22557067871094],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#1b00ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_cd5aad73fba44a689ae7b948306f64ce.bindTooltip(
+                `<div>
+                     Upper Rouge, 60
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_a2f65005004440018e62c3711f2819d0 = L.circleMarker(
+                [43.66793441772461, -79.37020111083984],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00c2ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_a2f65005004440018e62c3711f2819d0.bindTooltip(
+                `<div>
+                     St. James Town, Cabbagetown, 43
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_233506cbddc24b548c0332e197c141f9 = L.circleMarker(
+                [43.6526985168457, -79.51127624511719],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#003aff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_233506cbddc24b548c0332e197c141f9.bindTooltip(
+                `<div>
+                     The Kingsway, Montgomery Road, Old Mill North, 53
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_fa4af9f1015b46e8a72486297e41ff73 = L.circleMarker(
+                [43.66628646850586, -79.3824462890625],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#00ff5c", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_fa4af9f1015b46e8a72486297e41ff73.bindTooltip(
+                `<div>
+                     Church and Wellesley, 25
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_702e8ad201ea4bcd9be6bffc8406f934 = L.circleMarker(
+                [43.63370895385742, -79.49652099609375],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0015ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_702e8ad201ea4bcd9be6bffc8406f934.bindTooltip(
+                `<div>
+                     Old Mill South, King's Mill Park, Sunnylea, Humber Bay, Mimico NE, The Queensway East, Royal York South East, Kingsway Park South East, 56
+                 </div>`,
+                {"sticky": true}
+            );
+        
+    
+            var circle_marker_95d9bb291c6c410cad665a9c6188ef3f = L.circleMarker(
+                [43.62971115112305, -79.5174789428711],
+                {"bubblingMouseEvents": true, "color": null, "dashArray": null, "dashOffset": null, "fill": true, "fillColor": "#0091ff", "fillOpacity": 0.7, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "opacity": 1.0, "radius": 5, "stroke": true, "weight": 3}
+            ).addTo(map_39d807912f854786938e1bf9d5dd04b7);
+        
+    
+            circle_marker_95d9bb291c6c410cad665a9c6188ef3f.bindTooltip(
+                `<div>
+                     Mimico NW, The Queensway West, South of Bloor, Kingsway Park South West, Royal York South West, 47
+                 </div>`,
+                {"sticky": true}
+            );
+        
+</script>
